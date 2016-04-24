@@ -1,12 +1,12 @@
 
 <?php
 
-include('login-check.php');
+// include('login-check.php');
 include('../database.php');
 
 // Prepare a SELECT SQL statement with POSTED data
 $statement = $db_connection->prepare(
-    "SELECT * FROM GalleryPhoto WHERE ID=?"
+    "SELECT * FROM AdminUser WHERE ID=?"
 );
 
 // Replace ? with the actual ID
@@ -24,7 +24,7 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EOG Delete Data</title>
+  <title>EOG Delete Admin User</title>
   <link rel="stylesheet" href="../_css/style.css">
 </head>
 
@@ -36,10 +36,10 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
     <body>
 
       <main>
-          <form id="deleteForm" method="post" action="delete-action.php">
-           <h3>Delete Data</h3>
+          <form id="deleteUserForm" method="post" action="delete-user-action.php">
+           <h3>Delete Admin User</h3>
             <div class="formElements">
-              <table id="deleteTable">
+              <table id="deleteUserTable">
 
                   <tbody>
                     <tr>
@@ -49,16 +49,8 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
                     </tr>
 
                     <tr>
-                        <td class="tableData"><label>Title:</label></td>
-                        <td class="tableData"><?php echo $item['Title']; ?></td>
-                    </tr>
-                    <tr>
-                        <td class="tableData"><label>Description:</label></td>
-                        <td class="tableData"><?php echo $item['Short_Description']; ?>"></td>
-                    </tr>
-                    <tr>
-                        <td class="tableData"><label>Image:</label></td>
-                        <td class="tableData"><img src="../_uploads/<?php echo $item['Thumbnail_Image']; ?>" alt="<?php echo $item['Title']; ?>"></td>
+                        <td class="tableData"><label>Admin User:</label></td>
+                        <td class="tableData"><?php echo $item['UserName']; ?></td>
                     </tr>
                   </tbody>
 

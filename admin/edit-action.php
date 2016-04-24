@@ -7,7 +7,6 @@ include('../database.php');
 $statement = $db_connection->prepare(
     "UPDATE GalleryPhoto SET Title=?, Short_Description=? WHERE ID=?"
 );
-
 // Replace ?s
 $statement->bindParam(1, $_POST['title']);
 $statement->bindParam(2, $_POST['shortDescription']);

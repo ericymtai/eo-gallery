@@ -1,4 +1,5 @@
-* {
+
+    * {
         box-sizing: border-box;
     }
 
@@ -15,7 +16,7 @@
     }
     header  {
         text-align: center;
-        margin-top: -10px ;
+        margin: -10px -10px 0;
         background-image: url(../_images/background.png);
         background-repeat: no-repeat;
         background-position: top center;
@@ -30,6 +31,9 @@
         font-size: 2em;
         padding: 0 0 2.5em 0;
     }
+    nav {
+      margin-top: 2em;
+    }
     nav ul {
         text-align: center;
         margin-top: 2em;
@@ -41,7 +45,7 @@
         text-decoration: none;
         font-size: 1.6em;
         background: #661616;
-        color: #abf;
+        color: #d5ceea;
         padding: .2em .8em;
         margin: 1em 3.5em;
         letter-spacing: .05em;
@@ -97,26 +101,43 @@
       margin-bottom: 3em;
       background: #e5c380;
     }
+    td {
+      margin: .2em 0;
+      font-size: 1.3em;
+    }
+    td:first-child {
+      float: right;
+    }
     #editListTable  tr:last-child {
       height: 5em;
     }
-    #editListTable  td:nth-child(even) {
-          padding-left: 2em;
-          width: 15em;
+    #editListTable  td:nth-child(even),
+    #deleteTable td:nth-child(even),
+    #deleteUserListTable td:nth-child(even),
+    #deleteUserTable td:nth-child(even) {
+      padding-left: 2em;
+      width: 3.5em;
     }
     #editListTable img,
     #deleteTable img {
       max-width: 200px;
+      margin-top: .5em;
     }
-
+    #deleteTable img {
+      margin-left: .3em;
+    }
     #editListTable  td:last-child {
       vertical-align: top;
     }
-    td {
-        margin: .2em 0;
+    .editListTable_bottom_nav {
+      margin-bottom: 5em;
     }
-    td:first-child {
-        float: right;
+    .deleteLastTd {
+      padding-bottom: 3em;
+    }
+    .lastTd {
+      padding-bottom: 5.5em;
+      line-height: 2;
     }
     input {
       display: block;
@@ -235,7 +256,7 @@
     }
     footer ul li a {
         font-size: 1.5em;
-        color: #83b739;
+        color: #661616;
 
         text-decoration: none;
         margin: 0 3em;

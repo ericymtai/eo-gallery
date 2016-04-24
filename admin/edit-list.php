@@ -43,15 +43,15 @@ $statement = $db_connection->query(
                   <tbody>
       <?php while($item = $statement->fetch(PDO::FETCH_ASSOC)): ?>
                     <tr>
-                        <td class="tableData"><label for="title">Title:</label></td>
+                        <td class="tableData"><label>Title:</label></td>
                         <td class="tableData"><?php echo $item['Title']; ?></td>
                     </tr>
                     <tr>
-                        <td class="tableData"><label for="shortDescription">Description:</label></td>
+                        <td class="tableData"><label>Description:</label></td>
                         <td class="tableData"><?php echo $item['Short_Description']; ?></td>
                     </tr>
                     <tr>
-                        <td class="tableData"><label for="thumbnailImage">Image:</label></td>
+                        <td class="tableData"><label>Image:</label></td>
                         <td class="tableData"><img src="../_uploads/<?php echo $item['Thumbnail_Image']; ?>" alt="<?php echo $item['Title']; ?>"></td>
                     </tr>
                     <tr>
@@ -68,12 +68,12 @@ $statement = $db_connection->query(
       </form>
     </main>
 
-    <footer>
+    <nav class="editListTable_bottom_nav">
       <ul>
         <li><a href="add.php">ADD DATA</a></li>
         <li><a href="logout.php">LOGOUT</a></li>
       </ul>
-    </footer>
+    </nav>
 
   </body>
 </html>

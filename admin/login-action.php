@@ -1,7 +1,6 @@
 <?php
 
 ob_start();
-include('login-check.php');
 include('../database.php');
 
 $password = md5('password');
@@ -11,21 +10,19 @@ $statement = $db_connection->query(
     "SELECT * FROM AdminUser"
 );
 
-// Loop through each item
+// $item = $statement->fetch(PDO::FETCH_ASSOC);
 while($item = $statement->fetch(PDO::FETCH_ASSOC)):
 
-// Check if the user name and password are both matched
 if ($_POST['userName'] == $item['UserName'] && $password == $item['Password']  ) {
 
+  session_start();
   $_SESSION['flag'] = TRUE;
 
-  // Redirect to select page if matched
+  // Redirect to index
   header('location:select.php');
   exit();
 }
   endwhile;
-
-  // Redirect to index page if not matched
 header('location:index.php');
 
 ?>

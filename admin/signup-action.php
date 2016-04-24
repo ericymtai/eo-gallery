@@ -3,10 +3,9 @@
 include('login-check.php');
 include('../database.php');
 
-// Encypt the password
 $password = md5('password');
 
-// Prepare an INSERT statement with posted data
+// Prepare an INSERT statement with POSTED data
 $statement = $db_connection->prepare(
     "INSERT INTO AdminUser(userName, Password) VALUES(?, ?)"
 );

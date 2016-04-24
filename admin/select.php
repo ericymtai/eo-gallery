@@ -23,7 +23,9 @@ include('login-check.php');
 		<nav class="select">
 			<ul>
 				<li><a href="add.php">ADD DATA</a></li>
+        <li><a href="edit-list.php">EDIT DATA</a></li>
         <li><a href="signup.php">SIGN-UP NEW ADMIN USER</a></li>
+        <li><a href="delete-user-list.php">DELETE ADMIN USER</a></li>
 				<li><a href="logout.php">LOGOUT</a></li>
 			</ul>
 		</nav>

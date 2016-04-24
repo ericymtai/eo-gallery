@@ -3,16 +3,15 @@
 
 include('login-check.php');
 include('../database.php');
-
-// Prepare for SELECT
+// Query for specific orchid photo
 $statement = $db_connection->prepare(
     "SELECT * FROM GalleryPhoto WHERE ID=?"
 );
 
 // Replace ? with the actual ID
 $statement->bindParam(1, $_GET['id'], PDO::PARAM_INT);
-
-// Execute!
+// var_dump($_GET['id']);
+// Run the SQL query
 $statement->execute();
 
 $item = $statement->fetch(PDO::FETCH_ASSOC);
@@ -34,13 +33,6 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
             <img src="../_images/logo.svg" alt="logo" >
             <h1>Eric's Orchid Photo Gallery</h1>
         </header>
-
-        <nav>
-      		<ul>
-            <li><a href="add.php">ADD DATA</a></li>
-            <li><a href="logout.php">LOGOUT</a></li>
-      		</ul>
-      	</nav>
 
       <main>
           <form  enctype="multipart/form-data" id="editForm" method="post" action="edit-action.php">
@@ -72,12 +64,12 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
         </form>
       </main>
 
-      <footer>
-  			<ul>
-  				<li><a href="add.php">ADD DATA</a></li>
+      <nav>
+        <ul>
+          <li><a href="add.php">ADD DATA</a></li>
           <li><a href="logout.php">LOGOUT</a></li>
-  			</ul>
-  		</footer>
+        </ul>
+      </nav>
 
     </body>
 </html>
