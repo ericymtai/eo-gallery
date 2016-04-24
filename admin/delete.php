@@ -4,7 +4,7 @@
 include('login-check.php');
 include('../database.php');
 
-// Prepare a SELECT SQL statement with POSTED data
+// Prepare a SELECT SQL statement with posted data
 $statement = $db_connection->prepare(
     "SELECT * FROM GalleryPhoto WHERE ID=?"
 );
@@ -15,6 +15,7 @@ $statement->bindParam(1, $_GET['id'], PDO::PARAM_INT);
 // Execute the SELECT statement
 $statement->execute();
 
+// display the first row
 $item = $statement->fetch(PDO::FETCH_ASSOC);
 
 ?>

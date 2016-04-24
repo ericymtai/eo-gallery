@@ -42,12 +42,12 @@ include('login-check.php');
       </form>
     </main>
 
-		<nav>
-			<ul>
-				<li><a href="edit-list.php">EDIT DATA</a></li>
-				<li><a href="logout.php">LOGOUT</a></li>
-			</ul>
-		</nav>
+	<nav>
+		<ul>
+			<li><a href="edit-list.php">EDIT DATA</a></li>
+			<li><a href="logout.php">LOGOUT</a></li>
+		</ul>
+	</nav>
 
 	</body>
 </html>

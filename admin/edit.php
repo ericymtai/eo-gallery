@@ -3,15 +3,16 @@
 
 include('login-check.php');
 include('../database.php');
-// Query for specific orchid photo
+
+// Prepare for SELECT
 $statement = $db_connection->prepare(
     "SELECT * FROM GalleryPhoto WHERE ID=?"
 );
 
 // Replace ? with the actual ID
 $statement->bindParam(1, $_GET['id'], PDO::PARAM_INT);
-// var_dump($_GET['id']);
-// Run the SQL query
+
+// Execute!
 $statement->execute();
 
 $item = $statement->fetch(PDO::FETCH_ASSOC);
