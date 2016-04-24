@@ -1,6 +1,6 @@
 <?php
 
-// include('login-check.php');
+include('login-check.php');
 include('../database.php');
 
 // Prepare an DELETE SQL statement
@@ -41,7 +41,6 @@ $statement->execute();
           <li><a href="logout.php">LOGOUT</a></li>
         </ul>
       </nav>
-
 
     </body>
 </html>

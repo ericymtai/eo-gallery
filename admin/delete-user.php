@@ -1,7 +1,7 @@
 
 <?php
 
-// include('login-check.php');
+include('login-check.php');
 include('../database.php');
 
 // Prepare a SELECT SQL statement with POSTED data
@@ -40,20 +40,18 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
            <h3>Delete Admin User</h3>
             <div class="formElements">
               <table id="deleteUserTable">
-
                   <tbody>
                     <tr>
-                      <td>
-                        <input name="ID" type="hidden"  value="<?php echo $item['ID']; ?>">
-                      </td>
+                        <td>
+                          <input type="hidden" name="ID" value="<?php echo $item['ID']; ?>">
+                        </td>
+                        <td class="tableData">&nbsp;</td>
                     </tr>
-
                     <tr>
                         <td class="tableData"><label>Admin User:</label></td>
                         <td class="tableData"><?php echo $item['UserName']; ?></td>
                     </tr>
                   </tbody>
-
                 </table>
                   <input type="submit" value="CONFIRM DELETE">
          </div>   <!-- end .formElements -->

@@ -1,6 +1,6 @@
 <?php
 
-// include('login-check.php');
+include('login-check.php');
 
  ?>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>EOG SignUp admin</title>
+	<title>EOG SignUp Admin</title>
 	<link rel="stylesheet" href="../_css/style.css">
 </head>
 <body>

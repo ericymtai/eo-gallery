@@ -1,7 +1,7 @@
 
 <?php
 
-// include('login-check.php');
+include('login-check.php');
 include('../database.php');
 
 // Query for specific table data
@@ -17,7 +17,7 @@ $statement = $db_connection->query(
   <head>
   	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EOG Delete-Admin-User-List</title>
+    <title>EOG Delete Admin User List</title>
     <link rel="stylesheet" href="../_css/style.css">
   </head>
 

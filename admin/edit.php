@@ -41,9 +41,10 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
               <table id="editTable">
                   <tbody>
                     <tr>
-                      <td>
-                        <input name="ID" type="hidden"  value="<?php echo $item['ID']; ?>">
-                      </td>
+                        <td>
+                          <input name="ID" type="hidden"  value="<?php echo $item['ID']; ?>">
+                        </td>
+                        <td class="tableData">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="tableData"><label for="title">Title:</label></td>

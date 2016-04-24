@@ -34,7 +34,7 @@ $statement->execute();
     </header>
 
     <main>
-      <h2>New Admin User added</h2>
+      <h2>New Admin User Added</h2>
     </main>
 
     <nav>
@@ -42,7 +42,6 @@ $statement->execute();
         <li><a href="index.php">LOGIN</a></li>
       </ul>
     </nav>
-
 
   </body>
 </html>

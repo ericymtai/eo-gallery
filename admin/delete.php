@@ -40,14 +40,13 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
            <h3>Delete Data</h3>
             <div class="formElements">
               <table id="deleteTable">
-
                   <tbody>
                     <tr>
-                      <td>
-                        <input name="ID" type="hidden"  value="<?php echo $item['ID']; ?>">
-                      </td>
+                        <td>
+                          <input type="hidden" name="ID" value="<?php echo $item['ID']; ?>">
+                        </td>
+                        <td class="tableData">&nbsp;</td>
                     </tr>
-
                     <tr>
                         <td class="tableData"><label>Title:</label></td>
                         <td class="tableData"><?php echo $item['Title']; ?></td>
@@ -61,7 +60,6 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
                         <td class="tableData"><img src="../_uploads/<?php echo $item['Thumbnail_Image']; ?>" alt="<?php echo $item['Title']; ?>"></td>
                     </tr>
                   </tbody>
-
                 </table>
                   <input type="submit" value="CONFIRM DELETE">
          </div>   <!-- end .formElements -->

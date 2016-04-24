@@ -3,9 +3,9 @@
 include('login-check.php');
 include('../database.php');
 
-// Check if thumnail image submitted
+//check if thumnail image submitted
 if (!empty($_FILES['thumbnailImage']['name'])) {
-    // Move uploaded image from temp folder into uploads
+    // move uploaded image from temp folder into uploads
     move_uploaded_file(
         $_FILES['thumbnailImage']['tmp_name'], '../_uploads/' . $_FILES['thumbnailImage']['name']
     );
@@ -50,7 +50,6 @@ $statement->execute();
         <li><a href="logout.php">LOGOUT</a></li>
       </ul>
     </nav>
-
 
   </body>
 </html>
