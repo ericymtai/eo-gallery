@@ -20,7 +20,7 @@
 
 	<main>
       <form id="signUpForm" method="post" action="signup-action.php">
-       <h3>Sign Up Admin User</h3>
+       <h3>Sign-Up Admin User</h3>
         <div class="formElements">
         	<table id="signUpTable">
                     <tr>
@@ -37,10 +37,18 @@
                     </tr>
             </table>
 
-            <input type="submit" value="ADD NEW Admin User">
+            <input type="submit" value="ADD NEW ADMIN USER">
          </div>   <!-- end .formElements -->
       </form>
     </main>
+
+		<nav>
+			<ul>
+				<li><a href="edit-list.php">ADD NEW DATA</a></li>
+				<li><a href="edit-list.php">EDIT DATA</a></li>
+				<li><a href="logout.php">LOGOUT</a></li>
+			</ul>
+		</nav>
 
 	</body>
 </html>
