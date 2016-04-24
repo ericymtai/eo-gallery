@@ -23,7 +23,7 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
   <head>
   	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EO Edit Data</title>
+    <title>EOG Edit Data</title>
     <link rel="stylesheet" href="../_css/style.css">
   </head>
 
@@ -36,7 +36,7 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
 
         <nav>
       		<ul>
-            <li><a href="add.php">Add Data</a></li>
+            <li><a href="add.php">ADD DATA</a></li>
             <li><a href="logout.php">LOGOUT</a></li>
       		</ul>
       	</nav>
@@ -73,7 +73,7 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
 
       <footer>
   			<ul>
-  				<li><a href="add.php">Add Data</a></li>
+  				<li><a href="add.php">ADD DATA</a></li>
           <li><a href="logout.php">LOGOUT</a></li>
   			</ul>
   		</footer>
