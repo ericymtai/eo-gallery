@@ -1,9 +1,8 @@
 <?php
-
 include('login-check.php');
 include('../database.php');
 
-$password = md5('password');
+$password = md5($_POST['password']);
 
 // Prepare an INSERT statement with POSTED data
 $statement = $db_connection->prepare(
@@ -39,7 +38,7 @@ $statement->execute();
 
     <nav>
       <ul>
-        <li><a href="index.php">LOGIN</a></li>
+        <li><a href="select.php">OPTIONS</a></li>
       </ul>
     </nav>
 

@@ -1,5 +1,4 @@
 <?php
-
 include('../database.php');
 
 // Query for specific Database and create a table

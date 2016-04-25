@@ -1,4 +1,3 @@
-
 <?php
 
 include('login-check.php');
@@ -28,12 +27,11 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
   <link rel="stylesheet" href="../_css/style.css">
 </head>
 
-<header>
-    <img src="../_images/logo.svg" alt="logo" >
-    <h1>Eric's Orchid Photo Gallery</h1>
-</header>
-
-    <body>
+<body>
+      <header>
+          <img src="../_images/logo.svg" alt="logo" >
+          <h1>Eric's Orchid Photo Gallery</h1>
+      </header>
 
       <main>
           <form id="deleteForm" method="post" action="delete-action.php">
@@ -53,7 +51,7 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
                     </tr>
                     <tr>
                         <td class="tableData"><label>Description:</label></td>
-                        <td class="tableData"><?php echo $item['Short_Description']; ?>"></td>
+                        <td class="tableData"><?php echo $item['Short_Description']; ?></td>
                     </tr>
                     <tr>
                         <td class="tableData"><label>Image:</label></td>

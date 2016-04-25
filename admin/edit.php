@@ -1,6 +1,4 @@
-
 <?php
-
 include('login-check.php');
 include('../database.php');
 // Query for specific orchid photo
@@ -48,11 +46,11 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
                     </tr>
                     <tr>
                         <td class="tableData"><label for="title">Title:</label></td>
-                        <td class="tableData"><input type="text" name="title" size="35" value="<?php echo $item['Title']; ?>"></td>
+                        <td class="tableData"><input type="text" name="title" id="title" size="35" value="<?php echo $item['Title']; ?>"></td>
                     </tr>
                     <tr>
                         <td class="tableData"><label for="shortDescription">Short Description:</label></td>
-                        <td class="tableData"><textarea type="text" name="shortDescription"><?php echo $item['Short_Description']; ?></textarea></td>
+                        <td class="tableData"><textarea name="shortDescription" id="shortDescription"><?php echo $item['Short_Description']; ?></textarea></td>
                     </tr>
                     <tr>
                         <td class="tableData"><label for="thumbnailImage">Thumbnail Image:</label></td>
@@ -68,6 +66,7 @@ $item = $statement->fetch(PDO::FETCH_ASSOC);
       <nav>
         <ul>
           <li><a href="add.php">ADD DATA</a></li>
+          <li><a href="edit-list.php">EDIT DATA</a></li>
           <li><a href="logout.php">LOGOUT</a></li>
         </ul>
       </nav>

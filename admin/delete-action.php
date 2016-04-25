@@ -1,5 +1,4 @@
 <?php
-
 include('login-check.php');
 include('../database.php');
 
@@ -36,8 +35,7 @@ $statement->execute();
 
       <nav>
         <ul>
-          <li><a href="add.php">ADD DATA</a></li>
-          <li><a href="edit-list.php">EDIT DATA</a></li>
+          <li><a href="select.php">OPTIONS</a></li>
           <li><a href="logout.php">LOGOUT</a></li>
         </ul>
       </nav>

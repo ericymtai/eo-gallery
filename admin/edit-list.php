@@ -1,6 +1,4 @@
-
 <?php
-
 include('login-check.php');
 include('../database.php');
 
@@ -44,11 +42,11 @@ $statement = $db_connection->query(
       <?php while($item = $statement->fetch(PDO::FETCH_ASSOC)): ?>
                     <tr>
                         <td class="tableData"><label>Title:</label></td>
-                        <td class="tableData"><?php echo $item['Title']; ?></td>
+                        <td class="tableData"><input type="text" name="title" id="title" size="35" value="<?php echo $item['Title']; ?>"></td>
                     </tr>
                     <tr>
                         <td class="tableData"><label>Description:</label></td>
-                        <td class="tableData"><?php echo $item['Short_Description']; ?></td>
+                        <td class="tableData"><textarea name="shortDescription" id="shortDescription"><?php echo $item['Short_Description']; ?></textarea></td>
                     </tr>
                     <tr>
                         <td class="tableData"><label>Image:</label></td>

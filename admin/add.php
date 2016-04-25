@@ -1,5 +1,4 @@
 <?php
-
 include('login-check.php');
 
  ?>
@@ -29,7 +28,7 @@ include('login-check.php');
                     </tr>
                     <tr>
                         <td class="tableData"><label for="shortDescription">Short Description:</label></td>
-                        <td class="tableData"><textarea type="text" name="shortDescription" id="shortDescription" placeholder="No more than 30 words: " required></textarea></td>
+                        <td class="tableData"><textarea name="shortDescription" id="shortDescription" placeholder="No more than 30 words: " required></textarea></td>
                     </tr>
 										<tr>
                         <td class="tableData"><label for="thumbnailImage">Thumbnail Image:</label></td>

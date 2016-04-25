@@ -1,21 +1,22 @@
 <?php
-
 ob_start();
+session_start();
 include('../database.php');
 
-$password = md5('password');
+$password = md5($_POST['password']);
 
 // Query for specific table data
 $statement = $db_connection->query(
-    "SELECT * FROM AdminUser"
+    "SELECT * FROM AdminUser "
 );
 
 // $item = $statement->fetch(PDO::FETCH_ASSOC);
+
 while($item = $statement->fetch(PDO::FETCH_ASSOC)):
 
 if ($_POST['userName'] == $item['UserName'] && $password == $item['Password']  ) {
 
-  session_start();
+
   $_SESSION['flag'] = TRUE;
 
   // Redirect to index
@@ -23,6 +24,7 @@ if ($_POST['userName'] == $item['UserName'] && $password == $item['Password']  )
   exit();
 }
   endwhile;
+
 header('location:index.php');
 
 ?>

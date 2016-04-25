@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +33,12 @@
          </div>   <!-- end .formElements -->
       </form>
     </main>
+
+		<nav>
+			<ul>
+				<li><a href="../index.php">GALLERY</a></li>
+			</ul>
+		</nav>
 
 </body>
 </html>
