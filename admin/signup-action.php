@@ -1,8 +1,15 @@
 <?php
-include('login-check.php');
+
+// include('login-check.php');
 include('../database.php');
 
-$password = md5($_POST['password']);
+// $password = md5($_POST['password']);
+
+$options = [
+  'cost' => 8,
+  'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
+];
+// $password = password_hash($_POST['password'], PASSWORD_BCRYPT, $options );
 
 // Prepare an INSERT statement with POSTED data
 $statement = $db_connection->prepare(
@@ -11,7 +18,7 @@ $statement = $db_connection->prepare(
 
 // Replace ?s with actual values
 $statement->bindParam(1, $_POST['userName']);
-$statement->bindParam(2, $password);
+$statement->bindParam(2, password_hash($_POST['password'], PASSWORD_BCRYPT, $options ));
 
 // Execute the INSERT statement
 $statement->execute();
@@ -33,14 +40,15 @@ $statement->execute();
     </header>
 
     <main>
-      <h2>New Admin User Added</h2>
+      <h2>New Admin User added</h2>
     </main>
 
     <nav>
       <ul>
-        <li><a href="select.php">OPTIONS</a></li>
+        <li><a href="index.php">LOGIN</a></li>
       </ul>
     </nav>
+
 
   </body>
 </html>
